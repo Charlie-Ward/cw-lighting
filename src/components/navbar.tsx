@@ -28,7 +28,7 @@ const Navbar = () => {
                         <Link href='/portfolio'>Portfolio</Link>
                     </Button>
                     <Button asChild>
-                        <Link href='/contact-me'>Contact</Link>
+                        <Link href='/contact'>Contact</Link>
                     </Button>
                 </div>
             </div>
