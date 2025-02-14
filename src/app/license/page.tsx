@@ -4,9 +4,7 @@
 
 import React from "react";
 
-type Props = {}
-
-const page = (props: Props) => {
+const page = () => {
     return (
         <div className="flex justify-center">
             <p className="text-center w-3/4 text-white">
