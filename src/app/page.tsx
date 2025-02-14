@@ -28,9 +28,9 @@ export default function Home() {
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
             }}
           >
-            <h1 className="mb-4 text-6xl font-extrabold tracking-tight leading-none text-white md:text-7xl lg:text-8xl dark:text-white">Illuminate</h1>
+            <h1 className="mb-2 text-6xl font-extrabold tracking-tight leading-none text-white md:text-7xl lg:text-8xl dark:text-white">Illuminate</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-              <p className="text-2xl font-normal text-gray-400 lg:text-3xl sm:px-16 xl:px-48 dark:text-gray-400 pt-16">
+              <p className="text-2xl font-normal text-gray-400 lg:text-3xl sm:px-16 xl:px-48 dark:text-gray-400 pt-4 md:pt-16 mb-4 md:mb-0">
                 Welcome to CW Lighting, where creativity meets technical expertise.
               </p>
               <Image
@@ -38,13 +38,13 @@ export default function Home() {
                 width={540}
                 height={960}
                 alt="Charlie Ward at a lighting desk"
-                className="rounded-full"
+                className="rounded-full mb-8"
               />
             </div>
           </motion.div>
         </div>
       </section>
-      <div className="max-w-[864px] mx-auto pb-32">
+      <div className="max-w-[864px] mx-auto mb-8">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -62,7 +62,7 @@ export default function Home() {
               }),
             ]}>
             <CarouselContent>
-              {Array.from({ length: 7 }, (_, index) => (
+              {Array.from({ length: 6 }, (_, index) => (
                 <CarouselItem key={index}>
                   <AspectRatio ratio={16 / 9}>
                     <img
