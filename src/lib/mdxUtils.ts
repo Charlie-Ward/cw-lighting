@@ -9,22 +9,35 @@ import matter from 'gray-matter';
 
 const projectsDirectory = path.join(process.cwd(), 'projects');
 
+type ProjectData = {
+  slug: string;
+  title: string;
+  date: string;
+  content: string;
+  images: string[];
+  location: string;
+  roles: string;
+  webDate: string;
+};
+
 export function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory);
 }
 
-export function getProjectData(slug: string) {
+export function getProjectData(slug: string): ProjectData {
   const fullPath = path.join(projectsDirectory, slug);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  
+  // Ensure the date is included in the returned object
   return {
     slug,
-    ...data,
+    ...data, // This should include the date if it's in the front matter
     content,
-  };
+  } as ProjectData; // Cast to ProjectData type
 }
 
-export function getAllProjects() {
+export function getAllProjects(): ProjectData[] {
   const slugs = getProjectSlugs();
   const projects = slugs.map((slug) => getProjectData(slug));
 
