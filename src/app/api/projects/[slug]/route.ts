@@ -5,9 +5,9 @@
 import { NextResponse } from 'next/server';
 import { getProjectData } from '../../../../lib/mdxUtils';
 
-export async function GET(request: Request) {
-  const { pathname } = new URL(request.url);
-  const slug = pathname.split('/').pop(); // Extract slug from the URL
+export async function GET(request: Request, { params }: { params: { slug: string } }) {
+  // Ensure params is correctly destructured
+  const { slug } = params;
 
   try {
     const projectData = await getProjectData(slug);
