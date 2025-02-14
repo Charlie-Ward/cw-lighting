@@ -27,7 +27,7 @@ const ProjectPage = () => {
 
   useEffect(() => {
     const fetchProjectData = async () => {
-      const response = await fetch(`/api/projects/${slug}`);
+      const response = await fetch(`/api/projects/${slug}`); // Fetch data from the API
       if (response.ok) {
         const data = await response.json();
         setProjectData(data);
