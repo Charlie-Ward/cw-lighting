@@ -51,7 +51,7 @@ const ProjectPage = () => {
 
   if (!projectData) return <p className="text-white">Loading...</p>;
 
-  const { title, content, images, date, location, roles, webDate } = projectData;
+  const { title, content, images, location, roles, webDate } = projectData;
 
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
