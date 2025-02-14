@@ -5,18 +5,17 @@
 import { NextResponse } from 'next/server';
 import { getProjectData } from '../../../../lib/mdxUtils';
 
-export async function GET(request: Request, context: { params: { slug: string } }) {
-  // Directly access params.slug
-  const { slug } = context.params;
+export async function GET(request: Request, { params }: { params: { slug: string } }) {
+  const { slug } = params;
 
   try {
-    const projectData = await getProjectData(slug); // Ensure this function returns a promise
+    const projectData = await getProjectData(slug);
     if (!projectData) {
       return NextResponse.json({ message: 'Project not found' }, { status: 404 });
     }
     return NextResponse.json(projectData);
   } catch (error) {
     console.error("Error fetching project:", error);
-    return NextResponse.error(); // Respond with a 500 status code
+    return NextResponse.error();
   }
 }
