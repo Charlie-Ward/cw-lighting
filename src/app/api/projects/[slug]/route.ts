@@ -4,14 +4,13 @@
 
 import { NextResponse } from 'next/server';
 import { getProjectData } from '../../../../lib/mdxUtils';
-import { NextRequest } from 'next/server';
 
-export async function GET(request: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(request: Request, context: { params: { slug: string } }) {
   // Directly access params.slug
-  const slug = params.slug;
+  const { slug } = context.params;
 
   try {
-    const projectData = getProjectData(slug);
+    const projectData = await getProjectData(slug); // Ensure this function returns a promise
     if (!projectData) {
       return NextResponse.json({ message: 'Project not found' }, { status: 404 });
     }
