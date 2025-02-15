@@ -14,6 +14,7 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { motion } from "framer-motion";
 import AutoPlay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -62,12 +63,12 @@ export default function Home() {
               }),
             ]}>
             <CarouselContent>
-              {Array.from({ length: 6 }, (_, index) => (
+              {Array.from({ length: 7 }, (_, index) => (
                 <CarouselItem key={index}>
                   <AspectRatio ratio={16 / 9}>
                     <img
                       src={`/photos/home/carousel/slide-${index + 1}.jpeg`}
-                      alt={`A Gobo on a curtain ${index + 1}`}
+                      alt={`A Collection of Photos of Charlie&aposs Work`}
                       className="object-cover"
                     />
                   </AspectRatio>
@@ -79,6 +80,25 @@ export default function Home() {
           </Carousel>
         </motion.div>
       </div>
+
+      {/* Buttons Section */}
+      <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
+          }}>
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"> {/* Stack buttons on mobile, side by side on larger screens */}
+          <Link href="/portfolio" className="bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
+            See My Work
+          </Link>
+          <Link href="/contact" className="bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
+            Get In Touch
+          </Link>
+        </div>
+      </motion.div>
+
       <div className="max-w-[864px] mx-auto pb-32">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
