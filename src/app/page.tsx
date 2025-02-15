@@ -77,7 +77,7 @@ export default function Home() {
               ))}
             </CarouselContent>
             <CarouselPrevious />
-            <CarouselNext />
+            <CarouselNext className="hidden md:block"/>
           </Carousel>
         </motion.div>
       </div>
@@ -91,10 +91,10 @@ export default function Home() {
             scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
           }}>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"> {/* Stack buttons on mobile, side by side on larger screens */}
-          <Link href="/portfolio" className="bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
+          <Link href="/portfolio" className="flex items-center justify-center bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
             See My Work
           </Link>
-          <Link href="/contact" className="bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
+          <Link href="/contact" className="flex items-center justify-center bg-gray-300 text-black font-bold py-3 px-32 rounded hover:bg-gray-400 transition duration-200 w-full sm:w-auto">
             Get In Touch
           </Link>
         </div>

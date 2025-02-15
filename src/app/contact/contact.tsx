@@ -26,7 +26,7 @@ const Contact: FC = () => {
     <div className='h-screen w-full bg-black flex items-center justify-center'>
       <div className='bg-gray-800 p-8 rounded-lg shadow-lg'>
         <h1 className='text-white text-4xl font-bold mb-4'>Get In Touch</h1>
-        <p className="mb-8 text-gray-300">Have a project in mind? Let&pos;s discuss how I can help you bring it to life.</p>
+        <p className="mb-8 text-gray-300">Have a project in mind? Let&apos;s discuss how I can help you bring it to life.</p>
         <form className='space-y-4' onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label htmlFor='name'className='block text-sm font-medium text-gray-300'>Full Name</label>
