@@ -3,12 +3,11 @@
 //Full License @ https://github.com/Charlie-Ward/cw-lighting/blob/main/LICENSE
 
 import React from 'react'
+import Contact from './contact'
 
 const page = () => {
   return (
-    <div className="h-screen w-full bg-black flex items-center justify-center">
-      <h1 className="text-white text-4xl font-bold">Coming Soon</h1>
-    </div>
+    <Contact />
   )
 }
 

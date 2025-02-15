@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <div className="max-w-[864px] mx-auto pb-32">
+      <div className="max-w-[864px] mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -108,7 +108,7 @@ export default function Home() {
             scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
           }}>
           <section>
-            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div className="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12 py-8 lg:py-16">
               <div className="mr-auto place-self-center lg:col-span-7">
                 <h1 className="max-w-2xl mb-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none text-white">
                   About
