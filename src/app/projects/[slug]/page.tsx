@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Modal from '@/components/modal'; // Import the Modal component
 import { useParams } from 'next/navigation'; // Import useParams
+import Image from 'next/image';
 
 type ProjectProps = {
   title: string;
@@ -60,12 +61,15 @@ const ProjectPage = () => {
       <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: content }} />
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((img, index) => (
-          <img 
+          <Image 
             key={index} 
             src={img} 
             alt={`${title} image ${index + 1}`} 
             className="w-full h-48 object-cover rounded-lg cursor-pointer"
             onClick={() => openModal(img)} 
+            width={0} height={0} 
+            sizes='100vw' 
+            // style={{ width: "100%", height: "auto" }} test both with dad
           />
         ))}
       </div>

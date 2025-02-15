@@ -3,6 +3,7 @@
 // Full License @ https://github.com/Charlie-Ward/cw-lighting/blob/main/LICENSE
 
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 
 type ModalProps = {
   isOpen: boolean;
@@ -40,7 +41,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl }) => {
         >
           &times;
         </button>
-        <img
+        <Image
           src={imageUrl}
           alt="Fullscreen"
           className="w-full h-full object-contain"

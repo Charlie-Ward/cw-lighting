@@ -82,7 +82,7 @@ export default function Home() {
               </div>
               <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 <AspectRatio ratio={16 / 9}>
-                  <img
+                  <Image
                     src="/photos/home/mamma_mia.jpeg"
                     alt="mockup"
                     className="rounded-3xl"
@@ -114,7 +114,7 @@ export default function Home() {
               {Array.from({ length: 7 }, (_, index) => (
                 <CarouselItem key={index}>
                   <AspectRatio ratio={16 / 9}>
-                    <img
+                    <Image
                       src={`/photos/home/carousel/slide-${index + 1}.jpeg`}
                       alt={`A Collection of Photos of Charlie&aposs Work`}
                       className="object-cover"
