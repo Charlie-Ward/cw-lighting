@@ -35,7 +35,7 @@ const Home = () => {
         {projects.map((project: Project) => (
           <div key={project.slug} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <Image src={project.images[0]} alt={project.title} width={0} height={0} sizes='100vw' 
-              // style={{ width: "100%", height: "auto" }} test both
+              style={{ width: "100%", height: "auto" }}
               className="w-full h-48 object-cover" />
             <div className="p-4">
               <h2 className="text-white text-xl font-semibold">{project.title}</h2> <p className='text-white'>{project.year}</p>

@@ -76,8 +76,10 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext className="hidden md:block"/>
+            <div className="hidden md:block">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
           </Carousel>
         </motion.div>
       </div>
@@ -115,7 +117,7 @@ export default function Home() {
                   About
                 </h1>
                 <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
-                  Charlie Ward is a theatre technician based in the Leicestershire area. With experience in both theatre and other types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS and MagicQ lighting boards, Charlie is well equipped to handle most lighting solutions.
+                  Charlie Ward is a theatre technician based in the Leicestershire area. Experienced in both theatre and other types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS and MagicQ lighting boards, Charlie is well equipped to handle most lighting solutions.
                 </p>
               </div>
               <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">

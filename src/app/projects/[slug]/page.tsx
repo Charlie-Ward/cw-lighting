@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import Modal from '@/components/modal'; // Import the Modal component
 import { useParams } from 'next/navigation'; // Import useParams
 import Image from 'next/image';
+import { ZoomIn } from 'lucide-react';
 
 type ProjectProps = {
   title: string;
@@ -83,6 +84,10 @@ const ProjectPage = () => {
             sizes='100vw' 
           />
         ))}
+      </div>
+      <div className='flex items-center text-gray-400'>
+        <ZoomIn />
+        <p className='pl-4'>Click on each image to see it in full screen</p>
       </div>
       <Modal 
         isOpen={isModalOpen} 
