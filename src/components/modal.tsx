@@ -14,22 +14,25 @@ type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, onPrevImage, onNextImage }) => {
-  // Always call useEffect at the top level
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
+      if (event.key === 'ArrowLeft') {
+        onPrevImage();
+      } else if (event.key === 'ArrowRight') {
+        onNextImage();
+      } else if (event.key === 'Escape') {
+        onClose(); // Close modal on Escape key
       }
     };
 
-    // Add event listener
-    window.addEventListener('keydown', handleKeyDown);
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
 
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []); // Empty dependency array to run once on mount/unmount
+  }, [isOpen, onPrevImage, onNextImage, onClose]);
 
   // Render nothing if the modal is not open
   if (!isOpen) return null;
@@ -66,8 +69,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, onPrevImage, o
           src={imageUrl}
           alt="Fullscreen"
           className="w-full h-full object-contain"
-          width={0} height={0} 
-          sizes='100vw' 
+          layout='fill'
         />
       </div>
     </div>
