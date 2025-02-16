@@ -45,6 +45,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl }) => {
           src={imageUrl}
           alt="Fullscreen"
           className="w-full h-full object-contain"
+          width={0} height={0} 
+          sizes='100vw' 
         />
       </div>
     </div>
