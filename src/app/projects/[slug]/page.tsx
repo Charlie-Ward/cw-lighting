@@ -24,7 +24,7 @@ const ProjectPage = () => {
   const { slug } = useParams(); // Unwrap params using useParams
   const [projectData, setProjectData] = useState<ProjectProps | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchProjectData = async () => {
@@ -40,14 +40,26 @@ const ProjectPage = () => {
     fetchProjectData();
   }, [slug]);
 
-  const openModal = (image: string) => {
-    setSelectedImage(image);
+  const openModal = (index: number) => {
+    setSelectedImageIndex(index);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
+  };
+
+  const nextImage = () => {
+    if (projectData && selectedImageIndex !== null) {
+      setSelectedImageIndex((prevIndex) => (prevIndex! + 1) % projectData.images.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (projectData && selectedImageIndex !== null) {
+      setSelectedImageIndex((prevIndex) => (prevIndex! - 1 + projectData.images.length) % projectData.images.length);
+    }
   };
 
   if (!projectData) return <p className="text-white">Loading...</p>;
@@ -66,17 +78,18 @@ const ProjectPage = () => {
             src={img} 
             alt={`${title} image ${index + 1}`} 
             className="w-full h-48 object-cover rounded-lg cursor-pointer"
-            onClick={() => openModal(img)} 
+            onClick={() => openModal(index)} 
             width={0} height={0} 
             sizes='100vw' 
-            // style={{ width: "100%", height: "auto" }} test both with dad
           />
         ))}
       </div>
       <Modal 
         isOpen={isModalOpen} 
         onClose={closeModal} 
-        imageUrl={selectedImage || ''} 
+        imageUrl={images[selectedImageIndex || 0]} // Pass the current image
+        onPrevImage={prevImage} // Pass the function to go to the previous image
+        onNextImage={nextImage} // Pass the function to go to the next image
       />
     </div>
   );
