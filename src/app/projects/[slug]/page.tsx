@@ -9,7 +9,9 @@ import { notFound } from 'next/navigation';
 import Modal from '@/components/modal'; // Import the Modal component
 import { useParams } from 'next/navigation'; // Import useParams
 import Image from 'next/image';
-import { ZoomIn } from 'lucide-react';
+import { ZoomIn, ArrowBigLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 type ProjectProps = {
   title: string;
@@ -19,6 +21,7 @@ type ProjectProps = {
   location: string;
   roles: string;
   webDate: string;
+  visible: boolean;
 };
 
 const ProjectPage = () => {
@@ -65,7 +68,21 @@ const ProjectPage = () => {
 
   if (!projectData) return <p className="text-white">Loading...</p>;
 
-  const { title, content, images, location, roles, webDate } = projectData;
+  const { title, content, images, location, roles, webDate, visible } = projectData;
+
+  if (!visible) {
+    return(
+      <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
+        <p className="text-white text-xl font-bold">This project is not currently available.</p>
+        <Button>
+          <Link href='/portfolio' className="flex items-center">
+            <ArrowBigLeft className="inline-block" />
+            <span className="pl-16">Go Back</span>
+          </Link>
+        </Button>
+      </div>  
+    )
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center p-8">

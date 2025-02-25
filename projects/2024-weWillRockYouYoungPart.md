@@ -23,5 +23,6 @@ images:
   - "/photos/shows/2024-weWillRockYouYoungPart/photo15.JPG"
   - "/photos/shows/2024-weWillRockYouYoungPart/photo16.JPG"
   - "/photos/shows/2024-weWillRockYouYoungPart/photo17.jpeg"
+visible: true
 ---
 Based on the music of Queen, We Will Rock You is set 300 years in the future in a futuristic and globally corporate world. Planet Earth has been renamed the Planet Mall and is controlled by the Globalsoft Corporation. The head of Globalsoft is the sinister Killer Queen, who has banned all non-computer generated music. She has heard of a prophecy that instruments have been hidden somewhere on the planet and that ‘The Dreamer’ will emerge from the people to show the way to them. She orders her Chief of Police, Khashoggi, to get to the bottom of the matter and crush any rebellion. Meanwhile, Galileo, a young student and an outsider, is desperate to “break free” from this corporate world. He hears lyrics in his dreams and is heralded as the star of the prophecy by the Bohemians who have been searching for the lost instruments. To fulfill the prophecy. Galileo must evade the clutches of the Killer Queen and finally bring back the music. With the help of Pop, an aging hippie librarian, Galileo and Scaramouche find Rock's Holy Grail--Brian May's guitar--buried in the remains of Wembley Stadium.

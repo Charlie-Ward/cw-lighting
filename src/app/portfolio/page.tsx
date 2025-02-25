@@ -13,6 +13,7 @@ type Project = {
   slug: string;
   images: string[];
   year: string;
+  visible: boolean;
 };
 
 const Home = () => {
@@ -32,7 +33,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col items-center p-8">
       <h1 className="text-white text-4xl font-bold mb-8">My Portfolio</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project: Project) => (
+        {projects.filter(project => project.visible).map((project: Project) => (
           <div key={project.slug} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <Image src={project.images[0]} alt={project.title} width={0} height={0} sizes='100vw' 
               style={{ width: "100%", height: "auto" }}

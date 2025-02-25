@@ -16,4 +16,5 @@ images:
   - "/photos/shows/2025-sleepingBeauty/photo8.jpeg"
   - "/photos/shows/2025-sleepingBeauty/photo9.jpeg"
   - "/photos/shows/2025-sleepingBeauty/photo10.jpeg"
+visible: true
 ---

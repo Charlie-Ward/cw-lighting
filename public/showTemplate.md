@@ -1,14 +1,11 @@
 ---
-title: "Daydream Believer"
-date: "2024-12-01"  # Use ISO format YYYY-MM-DD
-year: "2024"
-webDate: "December 2024"
-location: "Iveshead Theatre"
-roles: "Co-Lighting Designer, Lighting Programmer"
+title: "TEMPLATE"
+date: "2025-01-01"  # Use ISO format YYYY-MM-DD
+year: "2025"
+webDate: "December 2025"
+location: "TEMPLATE"
+roles: "TEMPLATE"
 images:
-  - "/photos/shows/daydreamBeliever2022/photo1.png"
-  - "/photos/shows/daydreamBeliever2022/photo2.png"
-  - "/photos/shows/daydreamBeliever2022/photo3.png"
-  - "/photos/shows/daydreamBeliever2022/photo4.png"
-  - "/photos/shows/daydreamBeliever2022/photo5.png"
+  - "/photos/shows/2025-/photo1.png"
+visible: false
 ---

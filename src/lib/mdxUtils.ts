@@ -18,6 +18,7 @@ type ProjectData = {
   location: string;
   roles: string;
   webDate: string;
+  visible: boolean;
 };
 
 export function getProjectSlugs() {

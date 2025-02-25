@@ -14,5 +14,6 @@ images:
   - "/photos/shows/2024-sixTeenEdition/image6.png"
   - "/photos/shows/2024-sixTeenEdition/image7.jpeg"
   - "/photos/shows/2024-sixTeenEdition/image8.jpeg"
+visible: true
 ---
 From Tudor Queens to Pop Icons, the SIX wives of Henry VIII take the mic to remix five hundred years of historical heartbreak into a Euphoric Celebration of 21st-century girl power!
