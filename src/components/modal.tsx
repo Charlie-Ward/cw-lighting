@@ -45,8 +45,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, currentIndex, 
   if (!isOpen) return null;
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Close the modal only if the overlay is clicked
-    if (e.currentTarget === e.target) {
+    // Close the modal if anything is clicked that isn't the image or the buttons
+    if (e.target !== e.currentTarget && !(e.target as HTMLElement).closest('button, img')) {
       onClose();
     }
   };
