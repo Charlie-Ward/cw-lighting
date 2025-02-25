@@ -7,7 +7,7 @@ import { getAllProjects } from '../../../lib/mdxUtils';
 
 export async function GET() {
   try {
-    const projects = getAllProjects();
+    const projects = await getAllProjects();
     return NextResponse.json(projects);
   } catch (error) {
     console.error("Error fetching projects:", error);

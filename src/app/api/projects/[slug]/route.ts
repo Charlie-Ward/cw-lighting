@@ -23,6 +23,6 @@ export async function GET(request: Request) {
     return NextResponse.json(projectData);
   } catch (error) {
     console.error("Error fetching project:", error);
-    return NextResponse.error();
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
 }

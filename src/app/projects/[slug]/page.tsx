@@ -25,20 +25,22 @@ type ProjectProps = {
 };
 
 const ProjectPage = () => {
-  const { slug } = useParams(); // Unwrap params using useParams
+  const { slug } = useParams(); // Get the slug from the URL
   const [projectData, setProjectData] = useState<ProjectProps | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchProjectData = async () => {
-      const response = await fetch(`/api/projects/${slug}`); // Fetch data from the API
-      if (response.ok) {
-        const data = await response.json();
-        setProjectData(data);
-      } else {
-        notFound(); // If no data, show a 404 page
+      const response = await fetch(`/api/projects/${slug}`);
+      if (!response.ok) {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message); // Set the error message from the response
+        return;
       }
+      const data = await response.json();
+      setProjectData(data);
     };
 
     fetchProjectData();
@@ -66,18 +68,26 @@ const ProjectPage = () => {
     }
   };
 
-  if (!projectData){
-      return(
-        <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
-        <p className="text-white text-xl font-bold">This project does not exist.</p>
+  if (errorMessage) {
+    return (
+      <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
+        <p className="text-white text-xl font-bold">{errorMessage}</p>
         <Button>
           <Link href='/portfolio' className="flex items-center">
             <ArrowBigLeft className="inline-block" />
             <span className="pl-4">Go Back</span>
           </Link>
         </Button>
-      </div> 
-    )
+      </div>
+    );
+  }
+
+  if (!projectData) {
+    return (
+      <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
+        <p className="text-white text-xl font-bold">Loading...</p>
+      </div>
+    );
   }
 
   const { title, content, images, location, roles, webDate, visible } = projectData;
