@@ -5,7 +5,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
 import Modal from '@/components/modal'; // Import the Modal component
 import { useParams } from 'next/navigation'; // Import useParams
 import Image from 'next/image';
