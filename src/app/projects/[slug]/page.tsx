@@ -66,14 +66,26 @@ const ProjectPage = () => {
     }
   };
 
-  if (!projectData) return <p className="text-white">Loading...</p>;
+  if (!projectData){
+      return(
+        <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
+        <p className="text-white text-xl font-bold">This project does not exist.</p>
+        <Button>
+          <Link href='/portfolio' className="flex items-center">
+            <ArrowBigLeft className="inline-block" />
+            <span className="pl-16">Go Back</span>
+          </Link>
+        </Button>
+      </div> 
+    )
+  }
 
   const { title, content, images, location, roles, webDate, visible } = projectData;
 
   if (!visible) {
     return(
       <div className='min-h-screen flex flex-col items-center justify-center space-y-4'>
-        <p className="text-white text-xl font-bold">This project is not currently available.</p>
+        <p className="text-white text-xl font-bold">This project is not currently publicly available.</p>
         <Button>
           <Link href='/portfolio' className="flex items-center">
             <ArrowBigLeft className="inline-block" />
@@ -110,6 +122,8 @@ const ProjectPage = () => {
         isOpen={isModalOpen} 
         onClose={closeModal} 
         imageUrl={images[selectedImageIndex || 0]} // Pass the current image
+        currentIndex={selectedImageIndex || 0} // Pass the current image index
+        totalImages={images.length} // Pass the total number of images
         onPrevImage={prevImage} // Pass the function to go to the previous image
         onNextImage={nextImage} // Pass the function to go to the next image
       />
