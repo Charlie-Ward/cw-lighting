@@ -15,9 +15,10 @@ type ModalProps = {
   totalImages: number;
   onPrevImage: () => void;
   onNextImage: () => void;
+  showName: string;
 };
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, currentIndex, totalImages, onPrevImage, onNextImage }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, currentIndex, totalImages, onPrevImage, onNextImage, showName }) => {
   // Always call useEffect at the top level
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -55,7 +56,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl, currentIndex, 
       <div className="relative w-3/4 h-3/4 flex items-center justify-center">
         <Image
           src={imageUrl}
-          alt="Fullscreen"
+          alt={`${showName}: Image ${currentIndex + 1}`} 
           className="w-full h-full object-contain"
           layout='fill'
           priority

@@ -106,7 +106,7 @@ const ProjectPage = () => {
           <Image 
             key={index} 
             src={img} 
-            alt={`${title} image ${index + 1}`} 
+            alt={`${title}: Image ${index + 1}`} 
             className="w-full h-48 object-cover rounded-lg cursor-pointer"
             onClick={() => openModal(index)} 
             width={0} height={0} 
@@ -126,6 +126,7 @@ const ProjectPage = () => {
         totalImages={images.length} // Pass the total number of images
         onPrevImage={prevImage} // Pass the function to go to the previous image
         onNextImage={nextImage} // Pass the function to go to the next image
+        showName={title}
       />
     </div>
   );
