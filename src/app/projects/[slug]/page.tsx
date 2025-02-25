@@ -73,7 +73,7 @@ const ProjectPage = () => {
         <Button>
           <Link href='/portfolio' className="flex items-center">
             <ArrowBigLeft className="inline-block" />
-            <span className="pl-16">Go Back</span>
+            <span className="pl-4">Go Back</span>
           </Link>
         </Button>
       </div> 
@@ -89,7 +89,7 @@ const ProjectPage = () => {
         <Button>
           <Link href='/portfolio' className="flex items-center">
             <ArrowBigLeft className="inline-block" />
-            <span className="pl-16">Go Back</span>
+            <span className="pl-4">Go Back</span>
           </Link>
         </Button>
       </div>  
