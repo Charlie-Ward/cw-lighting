@@ -18,3 +18,6 @@ images:
   - "/photos/shows/2025-sleepingBeauty/photo10.jpeg"
 visible: true
 ---
+A Family Fun Panto.<br />
+
+The evil Carabosse curses Princess Beauty and causes everyone inside the Royal Palace to fall in a deep sleep when she touches a spinning wheel on her 18th birthday. Join Muddles, Alfred, Prince Archie and Dame Dolly Donut as they work together to defeat Carabosse and awaken everyone in the castle.

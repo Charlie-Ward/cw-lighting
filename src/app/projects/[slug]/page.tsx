@@ -109,7 +109,7 @@ const ProjectPage = () => {
     <div className="min-h-screen flex flex-col items-center p-8">
       <h1 className="text-white text-4xl font-bold mb-4">{title}</h1>
       <p className="text-gray-400 mb-4">{webDate} | {location} | {roles}</p>
-      <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="prose prose-invert mb-4" dangerouslySetInnerHTML={{ __html: content }} />
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((img, index) => (
           <Image 
