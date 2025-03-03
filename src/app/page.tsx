@@ -63,7 +63,7 @@ export default function Home() {
               }),
             ]}>
             <CarouselContent>
-              {Array.from({ length: 7 }, (_, index) => (
+              {Array.from({ length: 8 }, (_, index) => (
                 <CarouselItem key={index}>
                   <AspectRatio ratio={16 / 9}>
                     <Image
@@ -76,7 +76,7 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="hidden md:block">
+            <div className="absolute top-0 left-0 right-0 bottom-0 m-auto">
               <CarouselPrevious />
               <CarouselNext />
             </div>
