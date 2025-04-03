@@ -23,11 +23,11 @@ type ProjectData = {
 };
 
 export function getProjectSlugs() {
-  return fs.readdirSync(projectsDirectory);
+  return fs.readdirSync(projectsDirectory).map(filename => filename.replace('.md', ''));
 }
 
 export async function getProjectData(slug: string): Promise<ProjectData | null> {
-  const fullPath = path.join(projectsDirectory, slug);
+  const fullPath = path.join(projectsDirectory, `${slug}.md`);
 
   try {
     await fsPromises.access(fullPath, fs.constants.F_OK);

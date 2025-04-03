@@ -8,7 +8,7 @@ import { getProjectData } from '../../../../lib/mdxUtils';
 export async function GET(request: Request) {
   // Extract the slug from the request URL
   const { pathname } = new URL(request.url);
-  const slug = pathname.split('/').pop(); // Get the last part of the URL as the slug
+  const slug = pathname.split('/').pop()?.replace('.md', ''); // Ensure .md is removed if it's present
 
   // Check if slug is undefined
   if (!slug) {
