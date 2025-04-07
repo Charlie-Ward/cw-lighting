@@ -7,6 +7,7 @@
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import {
   Carousel,
   CarouselContent,
@@ -32,6 +33,7 @@ const Home = () => {
   const allProjectsRef = useRef<HTMLDivElement>(null);
   const [showArrow, setShowArrow] = useState(true);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -70,7 +72,7 @@ const Home = () => {
     // Set initial load to false after a short delay
     const timer = setTimeout(() => {
       setIsInitialLoad(false);
-    }, 1000);
+    }, 4000);
     
     // Clean up
     return () => {
@@ -81,6 +83,13 @@ const Home = () => {
 
   const scrollToAllProjects = () => {
     allProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleProjectClick = (slug: string, e: React.MouseEvent) => {
+    // Stop any event propagation to the carousel
+    e.stopPropagation();
+    // Navigate programmatically
+    router.push(`/projects/${slug}`);
   };
 
   return (
@@ -98,34 +107,41 @@ const Home = () => {
               }}
               plugins={[
                 AutoPlay({
-                  delay: 2500,
+                  delay: 5000,
                 }),
               ]}>
               <CarouselContent>
                 {featuredProjects.map((project) => (
                   <CarouselItem key={project.slug}>
-                    <Link href={`/projects/${project.slug}`}>
+                    <div 
+                      className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full relative"
+                    >
+                      <div 
+                        className="absolute inset-0 z-20 cursor-pointer" 
+                        style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+                        onClick={(e) => handleProjectClick(project.slug, e)}
+                      ></div>
                       <Image 
                         src={project.images[0]} 
                         alt={project.title} 
                         width={0} 
                         height={0} 
-                        sizes='100vw' 
-                        style={{ width: "100%", height: "auto" }}
+                        sizes="100vw" 
+                        style={{ width: "100%", height: "auto" }} 
                         className="w-full h-48 object-cover" 
                       />
                       <div className="p-4">
                         <h2 className="text-white text-xl font-semibold">{project.title}</h2>
-                        <p className='text-white text-base mb-1'>{project.year}</p>
-                        <p className='text-blue-400 hover:underline'>See More</p>
+                        <p className="text-white">{project.year}</p>
+                        <p className="text-blue-400">See More</p>
                       </div>
-                    </Link>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute inset-0 flex items-center justify-between px-2">
-                <CarouselPrevious className="static translate-y-0" />
-                <CarouselNext className="static translate-y-0" />
+              <div className="absolute inset-0 flex items-center justify-between px-2 z-30 pointer-events-none">
+                <CarouselPrevious className="static translate-y-0 pointer-events-auto" />
+                <CarouselNext className="static translate-y-0 pointer-events-auto" />
               </div>
             </Carousel>
           </div>
@@ -177,16 +193,22 @@ const Home = () => {
         <h2 className='text-xl font-bold text-white mb-3 text-center'>All Projects:</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter(project => project.visible).map((project: Project) => (
-              <div key={project.slug} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                <Link href={`/projects/${project.slug}`}>
-                  <Image src={project.images[0]} alt={project.title} width={0} height={0} sizes='100vw' 
-                    style={{ width: "100%", height: "auto" }}
-                    className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h2 className="text-white text-xl font-semibold">{project.title}</h2> <p className='text-white'>{project.year}</p>
-                      <p className='text-blue-400 hover:underline'>See More</p>
-                  </div>
-                </Link>
+              <div 
+                key={project.slug} 
+                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden relative"
+              >
+                <div 
+                  className="absolute inset-0 z-20 cursor-pointer" 
+                  onClick={(e) => handleProjectClick(project.slug, e)}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+                ></div>
+                <Image src={project.images[0]} alt={project.title} width={0} height={0} sizes='100vw' 
+                  style={{ width: "100%", height: "auto" }}
+                  className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h2 className="text-white text-xl font-semibold">{project.title}</h2> <p className='text-white'>{project.year}</p>
+                  <p className='text-blue-400'>See More</p>
+                </div>
               </div>
           ))}
         </div>
