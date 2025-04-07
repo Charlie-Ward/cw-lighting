@@ -16,10 +16,14 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className='max-w-[1280px] mx-auto'>
             <div className='flex items-center justify-between py-4'>
-                <Link href='/'>
+                <Link href='/' onClick={closeMenu}>
                     <Image src='/photos/cwLighting-light.png' width={100} height={40} alt='Logo Image' />
                 </Link>
                 <div className='hidden md:flex space-x-3'>
@@ -44,13 +48,13 @@ const Navbar = () => {
             {isOpen && (
                 <div className='md:hidden flex flex-col space-y-2 py-2'>
                     <Button asChild>
-                        <Link href='/'>Home</Link>
+                        <Link href='/' onClick={closeMenu}>Home</Link>
                     </Button>
                     <Button asChild>
-                        <Link href='/portfolio'>Portfolio</Link>
+                        <Link href='/portfolio' onClick={closeMenu}>Portfolio</Link>
                     </Button>
                     <Button asChild>
-                        <Link href='/contact'>Contact</Link>
+                        <Link href='/contact' onClick={closeMenu}>Contact</Link>
                     </Button>
                 </div>
             )}
