@@ -8,4 +8,5 @@ roles: "TEMPLATE"
 images:
   - "/photos/shows/2025-/photo1.png"
 visible: false
+feature: false
 ---
