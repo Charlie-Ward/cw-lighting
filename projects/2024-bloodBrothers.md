@@ -21,5 +21,6 @@ images:
   - "/photos/shows/2024-bloodBrothers/photo13.png"
   - "/photos/shows/2024-bloodBrothers/photo14.png"
 visible: true
+featured: true
 ---
 A woman with numerous children to support surrenders one of her newborn twins to her childless employer. The boys grow up streets apart, never learning the truth, but become firm friends and fall in love with the same girl. One prospers while the other falls on hard times. A narrator warns that the separation of twins commands a heavy price: the lives of the blood brothers, who die on the day they discover they are related.
