@@ -20,6 +20,7 @@ type ProjectData = {
   roles: string;
   webDate: string;
   visible: boolean;
+  featured: boolean;
 };
 
 export function getProjectSlugs() {
