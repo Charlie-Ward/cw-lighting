@@ -116,7 +116,7 @@ const ProjectPage = () => {
             key={index} 
             src={img} 
             alt={`${title}: Image ${index + 1}`} 
-            className="w-full h-48 object-cover rounded-lg cursor-pointer"
+            className="w-full object-cover rounded-lg cursor-pointer"
             onClick={() => openModal(index)} 
             width={0} height={0} 
             sizes='100vw' 
