@@ -97,7 +97,7 @@ const Home = () => {
       
       {/* Featured Projects Carousel - Hidden on mobile */}
       {featuredProjects.length > 0 && (
-        <div className="md:block mb-8 w-full max-w-2xl">
+        <div className="md:block mb-8 w-full max-w-6xl">
           <h2 className="text-xl font-bold text-white mb-3 text-center">Featured Projects:</h2>
           <div className="bg-gray-800 rounded-lg overflow-hidden border-2 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]">
             <Carousel
@@ -109,9 +109,12 @@ const Home = () => {
                   delay: 5000,
                 }),
               ]}>
-              <CarouselContent>
+              <CarouselContent className="flex">
                 {featuredProjects.map((project) => (
-                  <CarouselItem key={project.slug}>
+                  <CarouselItem 
+                    key={project.slug}
+                    className="basis-full md:basis-1/5 flex-shrink-0"
+                  >
                     <div 
                       className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full relative"
                     >
@@ -127,7 +130,7 @@ const Home = () => {
                         height={0} 
                         sizes="100vw" 
                         style={{ width: "100%", height: "auto" }} 
-                        className="w-full h-48 object-cover" 
+                        className="w-full h-80 object-cover" 
                       />
                       <div className="p-4">
                         <h2 className="text-white text-xl font-semibold">{project.title}</h2>
@@ -138,10 +141,12 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute inset-0 flex items-center justify-between px-2 z-30 pointer-events-none">
-                <CarouselPrevious className="static translate-y-0 pointer-events-auto" />
-                <CarouselNext className="static translate-y-0 pointer-events-auto" />
-              </div>
+              {featuredProjects.length > 5 && (
+                <div className="absolute inset-0 flex items-center justify-between px-2 z-30 pointer-events-none">
+                  <CarouselPrevious className="static translate-y-0 pointer-events-auto" />
+                  <CarouselNext className="static translate-y-0 pointer-events-auto" />
+                </div>
+              )}
             </Carousel>
           </div>
         </div>
