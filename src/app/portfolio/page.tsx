@@ -97,7 +97,7 @@ const Home = () => {
       
       {/* Featured Projects Carousel - Hidden on mobile */}
       {featuredProjects.length > 0 && (
-        <div className="md:block mb-8 w-full max-w-6xl">
+        <div className="hidden md:block mb-8 w-full max-w-6xl">
           <h2 className="text-xl font-bold text-white mb-3 text-center">Featured Projects:</h2>
           <div className="bg-gray-800 rounded-lg overflow-hidden border-2 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]">
             <Carousel
