@@ -110,38 +110,40 @@ const Home = () => {
                 }),
               ]}>
               <CarouselContent className="flex">
-                {featuredProjects.map((project) => (
-                  <CarouselItem 
-                    key={project.slug}
-                    className="basis-full md:basis-1/5 flex-shrink-0"
-                  >
-                    <div 
-                      className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full relative"
+                {featuredProjects
+                  .filter(project => project.visible)
+                  .map((project) => (
+                    <CarouselItem 
+                      key={project.slug}
+                      className="basis-full md:basis-1/5 flex-shrink-0"
                     >
                       <div 
-                        className="absolute inset-0 z-20 cursor-pointer" 
-                        style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-                        onClick={(e) => handleProjectClick(project.slug, e)}
-                      ></div>
-                      <Image 
-                        src={project.images[0]} 
-                        alt={project.title} 
-                        width={0} 
-                        height={0} 
-                        sizes="100vw" 
-                        style={{ width: "100%", height: "auto" }} 
-                        className="w-full h-80 object-cover" 
-                      />
-                      <div className="p-4">
-                        <h2 className="text-white text-xl font-semibold">{project.title}</h2>
-                        <p className="text-white">{project.year}</p>
-                        <p className="text-blue-400">See More</p>
+                        className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full relative"
+                      >
+                        <div 
+                          className="absolute inset-0 z-20 cursor-pointer" 
+                          style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+                          onClick={(e) => handleProjectClick(project.slug, e)}
+                        ></div>
+                        <Image 
+                          src={project.images[0]} 
+                          alt={project.title} 
+                          width={0} 
+                          height={0} 
+                          sizes="100vw" 
+                          style={{ width: "100%", height: "auto" }} 
+                          className="w-full h-80 object-cover" 
+                        />
+                        <div className="p-4">
+                          <h2 className="text-white text-xl font-semibold">{project.title}</h2>
+                          <p className="text-white">{project.year}</p>
+                          <p className="text-blue-400">See More</p>
+                        </div>
                       </div>
-                    </div>
-                  </CarouselItem>
-                ))}
+                    </CarouselItem>
+                  ))}
               </CarouselContent>
-              {featuredProjects.length > 5 && (
+              {featuredProjects.filter(project => project.visible).length > 5 && (
                 <div className="absolute inset-0 flex items-center justify-between px-2 z-30 pointer-events-none">
                   <CarouselPrevious className="static translate-y-0 pointer-events-auto" />
                   <CarouselNext className="static translate-y-0 pointer-events-auto" />

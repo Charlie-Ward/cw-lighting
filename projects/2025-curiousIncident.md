@@ -17,6 +17,7 @@ images:
   - "/photos/shows/2025-curiousIncident/photo9.jpg"
   - "/photos/shows/2025-curiousIncident/photo10.jpg"
 visible: true
+featured: false
 ---
 Set in Swindon and London, the story concerns 15-year-old Christopher John Francis Boone, a mathematical genius with an autism spectrum disorder. The titular curious incident is the mystery surrounding the death of Wellington, his neighbor Mrs. Shears' poodle, after Christopher finds the dog speared with a garden fork.<br />
 
