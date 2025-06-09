@@ -47,12 +47,6 @@ export default function Home() {
   const prevIndex = (selectedIndex - 1 + SLIDE_COUNT) % SLIDE_COUNT;
   const nextIndex = (selectedIndex + 1) % SLIDE_COUNT;
 
-  // Only render these three slides
-  const visibleSlides = [
-    { index: prevIndex, position: "prev" },
-    { index: selectedIndex, position: "current" },
-    { index: nextIndex, position: "next" },
-  ];
 
   return (
     <div>
