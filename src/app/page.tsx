@@ -13,10 +13,54 @@ import {
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { motion } from "framer-motion";
-import AutoPlay from "embla-carousel-autoplay";
 import Link from "next/link";
+import React, { useRef, useState, useEffect } from "react";
+import useEmblaCarousel from 'embla-carousel-react'
+import AutoPlay from 'embla-carousel-autoplay'
 
 export default function Home() {
+  const SLIDE_COUNT = 11;
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  
+  // Create a ref for the autoplay plugin
+  const autoplayRef = useRef(
+    AutoPlay({ delay: 5000, stopOnInteraction: false })
+  );
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [autoplayRef.current] // Use the ref here
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
+  const scrollTo = (idx: number) => {
+    if (emblaApi) {
+      // Stop autoplay when user clicks on a dot
+      autoplayRef.current.stop();
+      emblaApi.scrollTo(idx);
+    }
+  };
+
+  // Calculate indices for previous, current, and next slides
+  const prevIndex = (selectedIndex - 1 + SLIDE_COUNT) % SLIDE_COUNT;
+  const nextIndex = (selectedIndex + 1) % SLIDE_COUNT;
+
+  // Only render these three slides
+  const visibleSlides = [
+    { index: prevIndex, position: "prev" },
+    { index: selectedIndex, position: "current" },
+    { index: nextIndex, position: "next" },
+  ];
+
   return (
     <div>
       <section className="">
@@ -53,34 +97,36 @@ export default function Home() {
             duration: 1.2,
             scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
           }}>
-          <Carousel
-            opts={{
-              loop: true,
-            }}
-            plugins={[
-              AutoPlay({
-                delay: 5000,
-              }),
-            ]}>
-            <CarouselContent>
-              {Array.from({ length: 8 }, (_, index) => (
-                <CarouselItem key={index}>
+          <div ref={emblaRef} className="px-4 md:px-16 overflow-hidden">
+            <div className="flex">
+              {Array.from({ length: SLIDE_COUNT }).map((_, index) => (
+                <div 
+                  key={index} 
+                  className="flex-[0_0_85%] md:flex-[0_0_60%] mx-2"
+                >
                   <AspectRatio ratio={16 / 9}>
                     <Image
                       src={`/photos/home/carousel/slide-${index + 1}.jpeg`}
-                      alt={`A Collection of Photos of Charlie&aposs Work`}
-                      className="object-cover"
+                      alt={`A Collection of Photos of Charlie's Work`}
+                      className="object-cover rounded-xl"
                       layout="fill"
                     />
                   </AspectRatio>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <div className="absolute top-0 left-0 right-0 bottom-0 m-auto">
-              <CarouselPrevious />
-              <CarouselNext />
             </div>
-          </Carousel>
+            {/* Dots Pagination */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {Array.from({ length: SLIDE_COUNT }).map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`w-3 h-3 rounded-full ${selectedIndex === idx ? 'bg-amber-500' : 'bg-gray-400'} transition-colors`}
+                  onClick={() => scrollTo(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
 
