@@ -43,10 +43,6 @@ export default function Home() {
     }
   };
 
-  // Calculate indices for previous, current, and next slides
-  const prevIndex = (selectedIndex - 1 + SLIDE_COUNT) % SLIDE_COUNT;
-  const nextIndex = (selectedIndex + 1) % SLIDE_COUNT;
-
 
   return (
     <div>
