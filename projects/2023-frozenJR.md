@@ -6,10 +6,10 @@ webDate: "December 2023"
 location: "Iveshead Theatre"
 roles: "Lighting Designer, Lighting Programmer, Lighting Technician"
 images:
-  - "/photos/shows/2023-frozenJR/photo1.jpg"
-  - "/photos/shows/2023-frozenJR/photo2.png"
-  - "/photos/shows/2023-frozenJR/photo3.png"
-  - "/photos/shows/2023-frozenJR/photo4.png"
+  - "/photos/shows/2023-frozenJR/photo1.avif"
+  - "/photos/shows/2023-frozenJR/photo2.avif"
+  - "/photos/shows/2023-frozenJR/photo3.avif"
+  - "/photos/shows/2023-frozenJR/photo4.avif"
 visible: true
 ---
 

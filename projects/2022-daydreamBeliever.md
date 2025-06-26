@@ -6,11 +6,11 @@ webDate: "December 2022"
 location: "Iveshead Theatre"
 roles: "Co-Lighting Designer, Lighting Programmer"
 images:
-  - "/photos/shows/2022-daydreamBeliever/photo1.png"
-  - "/photos/shows/2022-daydreamBeliever/photo2.png"
-  - "/photos/shows/2022-daydreamBeliever/photo3.png"
-  - "/photos/shows/2022-daydreamBeliever/photo4.png"
-  - "/photos/shows/2022-daydreamBeliever/photo5.png"
+  - "/photos/shows/2022-daydreamBeliever/photo1.avif"
+  - "/photos/shows/2022-daydreamBeliever/photo2.avif"
+  - "/photos/shows/2022-daydreamBeliever/photo3.avif"
+  - "/photos/shows/2022-daydreamBeliever/photo4.avif"
+  - "/photos/shows/2022-daydreamBeliever/photo5.avif"
 visible: true
 ---
 In a futuristic dystopia where children are addicted to screens and Amazon controls everything — including education — Santa is struggling to keep his North Pole workshop running. The elves are threatening to strike over the new poor working conditions.<br />

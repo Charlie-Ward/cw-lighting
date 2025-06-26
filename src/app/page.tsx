@@ -62,7 +62,7 @@ export default function Home() {
                 Welcome to CW Lighting, where creativity meets technical expertise.
               </p>
               <Image
-                src="/photos/lthDesk.jpeg"
+                src="/photos/lthDesk.avif"
                 width={540}
                 height={960}
                 alt="Charlie Ward at a lighting desk"
@@ -89,7 +89,7 @@ export default function Home() {
                 >
                   <AspectRatio ratio={16 / 9}>
                     <Image
-                      src={`/photos/home/carousel/slide-${index + 1}.jpeg`}
+                      src={`/photos/home/carousel/slide-${index + 1}.avif`}
                       alt={`A Collection of Photos of Charlie's Work`}
                       className="object-cover rounded-xl"
                       layout="fill"
@@ -152,7 +152,7 @@ export default function Home() {
               <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 <AspectRatio ratio={16 / 9}>
                   <Image
-                    src="/photos/home/mamma_mia.jpeg"
+                    src="/photos/home/mamma_mia.avif"
                     alt="mockup"
                     className="rounded-3xl"
                     layout="fill"

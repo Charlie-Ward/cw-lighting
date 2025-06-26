@@ -6,14 +6,14 @@ webDate: "May 2025"
 location: "MMC Venue"
 roles: "Lighting Technician, Board Operator and Assistant Lighting Designer"
 images:
-  - "/photos/shows/2025-bonnieAndClyde/photo1.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo2.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo3.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo4.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo5.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo6.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo7.jpg"
-  - "/photos/shows/2025-bonnieAndClyde/photo8.jpg"
+  - "/photos/shows/2025-bonnieAndClyde/photo1.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo2.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo3.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo4.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo5.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo6.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo7.avif"
+  - "/photos/shows/2025-bonnieAndClyde/photo8.avif"
 visible: true
 featured: true
 ---
