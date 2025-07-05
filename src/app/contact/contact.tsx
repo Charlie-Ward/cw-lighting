@@ -8,6 +8,7 @@ import React from 'react'
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { sendEmail } from '@/utils/send-emails'
+import Image from 'next/image'
 
 export type FormData = {
     name: string;
@@ -24,8 +25,23 @@ const Contact: FC = () => {
   }
   
   return (
-    <div className='h-screen w-full bg-black flex items-center justify-center'>
-      <div className='bg-gray-800 p-8 rounded-lg shadow-lg'>
+    <div className='h-screen w-full bg-black flex items-center justify-center relative overflow-hidden'>
+      {/* Background Image - positioned to cover height first */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/photos/home/contact.avif" // Replace with your image path
+          alt="Background"
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'center' }}
+          priority
+        />
+        {/* Add a dark overlay to improve form readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      </div>
+      
+      {/* Contact Form - with higher z-index to appear above the background */}
+      <div className='bg-gray-800 p-8 rounded-lg shadow-lg z-10 relative max-w-md w-full bg-opacity-90'>
         <h1 className='text-white text-4xl font-bold mb-4'>Get In Touch</h1>
         <p className="mb-8 text-gray-300">Have a project in mind? Let&apos;s discuss how I can help you bring it to life.</p>
         <form className='space-y-4' onSubmit={handleSubmit(onSubmit)}>
