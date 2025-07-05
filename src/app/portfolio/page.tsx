@@ -24,6 +24,7 @@ type Project = {
   year: string;
   visible: boolean;
   featured: boolean;
+  webDate: string;
 };
 
 const Home = () => {
@@ -212,7 +213,7 @@ const Home = () => {
                   style={{ width: "100%", height: "auto" }}
                   className="w-full h-48 object-cover" />
                 <div className="p-4">
-                  <h2 className="text-white text-xl font-semibold">{project.title}</h2> <p className='text-white'>{project.year}</p>
+                  <h2 className="text-white text-xl font-semibold">{project.title}</h2> <p className='text-white'>{project.webDate}</p>
                   <p className='text-blue-400'>See More</p>
                 </div>
               </div>
