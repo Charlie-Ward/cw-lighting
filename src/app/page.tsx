@@ -12,7 +12,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import AutoPlay from 'embla-carousel-autoplay'
 
 export default function Home() {
-  const SLIDE_COUNT = 11;
+  const SLIDE_COUNT = 12;
   const [selectedIndex, setSelectedIndex] = useState(0);
   
   // Create a ref for the autoplay plugin
