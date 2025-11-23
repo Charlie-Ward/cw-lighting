@@ -11,7 +11,7 @@ images:
   - "/photos/shows/2022-daydreamBeliever/photo3.avif"
   - "/photos/shows/2022-daydreamBeliever/photo4.avif"
   - "/photos/shows/2022-daydreamBeliever/photo5.avif"
-visible: true
+visible: false
 ---
 In a futuristic dystopia where children are addicted to screens and Amazon controls everything — including education — Santa is struggling to keep his North Pole workshop running. The elves are threatening to strike over the new poor working conditions.<br />
 
