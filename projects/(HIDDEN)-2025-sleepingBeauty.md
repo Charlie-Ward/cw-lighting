@@ -16,7 +16,7 @@ images:
   - "/photos/shows/2025-sleepingBeauty/photo8.avif"
   - "/photos/shows/2025-sleepingBeauty/photo9.avif"
   - "/photos/shows/2025-sleepingBeauty/photo10.avif"
-visible: true
+visible: false
 ---
 A Family Fun Panto.<br />
 
