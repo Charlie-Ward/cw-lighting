@@ -4,7 +4,7 @@ date: "2025-12-13"  # Use ISO format YYYY-MM-DD
 year: "2025"
 webDate: "November/December 2025 / January 2026"
 location: "Loughborough Town Hall"
-roles: "LX Opereator"
+roles: "LX Operator"
 images:
   - "/photos/shows/2025-cinderella/photo1.avif"
   - "/photos/shows/2025-cinderella/photo2.avif"
