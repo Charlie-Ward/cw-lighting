@@ -29,7 +29,7 @@ const Contact: FC = () => {
       {/* Background Image - positioned to cover height first */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/photos/home/contact.avif" // Replace with your image path
+          src="/photos/home/contactMatilda.avif" // Replace with your image path
           alt="Background"
           fill
           className="object-cover"
