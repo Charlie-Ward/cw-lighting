@@ -150,11 +150,11 @@ export default function Home() {
                 </p>
               </div>
               <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <AspectRatio ratio={16 / 9}>
+                <AspectRatio ratio={1 / 1} className="overflow-hidden rounded-[4rem]">
                   <Image
-                    src="/photos/home/mamma_mia.avif"
+                    src="/photos/GrandMABusk.avif"
                     alt="mockup"
-                    className="rounded-3xl"
+                    className="object-cover"
                     layout="fill"
                   />
                 </AspectRatio>
