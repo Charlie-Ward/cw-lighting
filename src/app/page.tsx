@@ -149,7 +149,7 @@ export default function Home() {
                   Charlie Ward is a theatre technician based in the Leicestershire and Cardiff area. Experienced in both theatre and other types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS and MagicQ lighting boards, Charlie is well equipped to handle most lighting solutions.
                 </p>
               </div>
-              <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+              <div className="flex justify-center mt-8 lg:mt-0 lg:col-span-5">
                 <AspectRatio ratio={1 / 1} className="overflow-hidden rounded-[4rem]">
                   <Image
                     src="/photos/GrandMABusk.avif"
