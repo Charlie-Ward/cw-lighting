@@ -146,13 +146,54 @@ export default function Home() {
                   About
                 </h1>
                 <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
-                  Charlie Ward is a theatre technician based in the Leicestershire and Cardiff area. Experienced in both theatre and other types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS and MagicQ lighting boards, Charlie is well equipped to handle most lighting solutions.
+                  Charlie Ward is a theatre technician based in the Leicestershire and Cardiff area. Experienced in a mixture of types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS, MagicQ and GrandMA3 lighting boards, Charlie is well equipped to handle all your lighting solutions.
                 </p>
               </div>
               <div className="flex justify-center mt-8 lg:mt-0 lg:col-span-5">
                 <AspectRatio ratio={1 / 1} className="overflow-hidden rounded-[4rem]">
                   <Image
                     src="/photos/GrandMABusk.avif"
+                    alt="mockup"
+                    className="object-cover"
+                    layout="fill"
+                  />
+                </AspectRatio>
+              </div>
+            </div>
+          </section>
+        </motion.div>
+      </div>
+      <div className="max-w-[864px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
+          }}>
+          <section>
+            <div className="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12 py-8 lg:py-16">
+              <div className="mr-auto place-self-center lg:col-span-7">
+                <h1 className="max-w-2xl mb-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none text-white">
+                  My Skills
+                </h1>
+                <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
+                  <b>Lighting Control: </b>
+                  EOS, GrandMA3 & MagicQ <br />
+                  <b>Show Control Systems: </b>
+                  QLab & MIDI Timecode <br />
+                  <b>Visulisation: </b>
+                  Capture, Augment3D & MA3D <br />
+                  <b>CAD Software: </b>
+                  AutoCAD & Vectorworks <br />
+
+
+                </p>
+              </div>
+              <div className="flex justify-center mt-8 lg:mt-0 lg:col-span-5">
+                <AspectRatio ratio={1 / 1} className="overflow-hidden rounded-[4rem]">
+                  <Image
+                    src="/photos/CWmixing.avif"
                     alt="mockup"
                     className="object-cover"
                     layout="fill"
