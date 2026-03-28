@@ -17,7 +17,7 @@ images:
   - "/photos/shows/2024-mammaMia/photo9.avif"
   - "/photos/shows/2024-mammaMia/photo10.avif"
   - "/photos/shows/2024-mammaMia/photo11.avif"
-visible: true
+visible: false
 featured: false
 ---
 On the eve of her wedding, a daughter's quest to discover the identity of her father brings three men from her mother's past back to the island they last visited 20 years ago. The story-telling magic of ABBA's timeless songs propels this enchanting tale of love, laughter and friendship, creating an unforgettable show.

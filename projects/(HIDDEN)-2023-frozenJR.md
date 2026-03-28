@@ -10,7 +10,7 @@ images:
   - "/photos/shows/2023-frozenJR/photo2.avif"
   - "/photos/shows/2023-frozenJR/photo3.avif"
   - "/photos/shows/2023-frozenJR/photo4.avif"
-visible: true
+visible: false
 ---
 
 In the beautiful mountainous kingdom of Arendelle, Princesses Anna and Elsa grow up sheltered inside their castle, isolated from the world and increasingly distant from each other. When Elsa is crowned queen, the magical powers she’s desperately tried to conceal from her sister take control, and she flees into the mountains. As a ferocious winter descends on Arendelle, Anna sets off on an epic journey to find Elsa and bring her home – with the help of hardworking ice harvester Kristoff, his loyal reindeer Sven, and a happy-go-lucky snowman named Olaf.
