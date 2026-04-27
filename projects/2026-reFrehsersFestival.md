@@ -1,5 +1,5 @@
 ---
-title: "ReFreshers Festival (RWCMD)"
+title: "ReFreshers Festival"
 date: "2026-01-16"  # Use ISO format YYYY-MM-DD
 year: "2026"
 webDate: "January 2026"
