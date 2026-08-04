@@ -13,7 +13,7 @@ images:
   - "/photos/shows/2025-queenTribute/photo5.avif"
   - "/photos/shows/2025-queenTribute/photo6.avif"
   - "/photos/shows/2025-queenTribute/photo7.avif"
-visible: true
+visible: false
 featured: false
 ---
 A showreel for a local Queen tribute band, Galileo.
