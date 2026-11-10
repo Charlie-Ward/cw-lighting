@@ -15,6 +15,6 @@ images:
   - "/photos/shows/2026-reFreshers/photo7.avif"
   - "/photos/shows/2026-reFreshers/photo8.avif"
 visible: true
-featured: true
+featured: false
 ---
 A student led event night to celebrate the start of the spring term.

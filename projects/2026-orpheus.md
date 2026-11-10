@@ -17,7 +17,9 @@ images:
   - "/photos/shows/2026-orpheus/image9.avif"
   - "/photos/shows/2026-orpheus/image10.avif"
 visible: true
-featured: true
+featured: false
 ---
 Offenbach’s satirical Orpheus in the Underworld turns ancient myth into comic opera at its most playful. Eurydice has had enough of Orpheus, he’s not exactly heartbroken, and the gods are too busy partying to care. <br/>
-With a sparkling score featuring the famous cancan, sharp humour and fast-paced dialogue. A joyful journey to the underworld where laughter, mayhem, and Offenbach’s irresistible music reign supreme!
+With a sparkling score featuring the famous cancan, sharp humour and fast-paced dialogue. A joyful journey to the underworld where laughter, mayhem, and Offenbach’s irresistible music reign supreme! <br/>
+<br/>
+📷 Kirsten McTernan

@@ -12,5 +12,5 @@ images:
   - "/photos/shows/2025-ivesheadsGotTalent/photo4.avif"
   - "/photos/shows/2025-ivesheadsGotTalent/photo5.avif"
 visible: true
-featured: true
+featured: false
 ---
