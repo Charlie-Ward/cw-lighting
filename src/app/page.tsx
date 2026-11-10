@@ -56,13 +56,14 @@ export default function Home() {
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.6 },
             }}
           >
-            <h1 className="mb-2 text-6xl font-extrabold tracking-tight leading-none text-white md:text-7xl lg:text-8xl dark:text-white">Illuminate</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-              <p className="text-2xl font-normal text-gray-400 lg:text-3xl sm:px-16 xl:px-48 dark:text-gray-400 pt-4 md:pt-16 mb-4 md:mb-0">
-                Welcome to CW Lighting, where creativity meets technical expertise.
-              </p>
+            {/* <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Welcome to CW Lighting</h1> */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+              {/* <p className="text-2xl font-normal text-gray-400 lg:text-3xl sm:px-16 xl:px-48 dark:text-gray-400 pt-4 md:pt-16 mb-4 md:mb-0">
+                Welcome to CW Lighting
+              </p> */}
+              <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Welcome to CW Lighting</h1>
               <Image
-                src="/photos/lthDesk.avif"
+                src="/photos/homeImage.avif"
                 width={540}
                 height={960}
                 alt="Charlie Ward at a lighting desk"
@@ -146,7 +147,7 @@ export default function Home() {
                   About
                 </h1>
                 <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
-                  Charlie Ward is a theatre technician based in the Leicestershire and Cardiff area. Experienced in a mixture of types of stage entertainment he is the go-to place for all your technical needs. With training on both EOS, MagicQ and GrandMA3 lighting boards, Charlie is well equipped to handle all your lighting solutions.
+                  Charlie Ward is a theatre technician based in the Leicestershire and Cardiff area. Experienced in a mixture of types of stage entertainment he is the go-to for all your technical needs. With training on both EOS, MagicQ and GrandMA3 lighting boards, Charlie is well equipped to handle all your lighting solutions.
                 </p>
               </div>
               <div className="flex justify-center mt-8 lg:mt-0 lg:col-span-5">
