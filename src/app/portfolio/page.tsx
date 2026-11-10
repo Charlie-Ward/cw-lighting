@@ -137,7 +137,7 @@ const Home = () => {
                         />
                         <div className="p-4">
                           <h2 className="text-white text-xl font-semibold">{project.title}</h2>
-                          <p className="text-white">{project.year}</p>
+                          <p className="text-white">{project.webDate}</p>
                           <p className="text-blue-400">See More</p>
                         </div>
                       </div>
